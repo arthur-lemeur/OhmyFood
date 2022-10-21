@@ -1,0 +1,27 @@
+.restaurant_page {
+    background-color: $color_background-menus;
+    border-radius: 25px 25px 0px 0px;
+    margin-top: 27vh;
+    text-align: center;
+    > p {
+        border-bottom: 2px solid #99e2d0;
+        width: $padding * 2;
+        margin-top: $padding;
+    }
+    .restaurant_name {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: $padding;
+        padding-bottom: $padding;
+    }
+    button {
+        margin: $padding;
+        width: 200px;
+    }
+}
+
+body > img {
+    position: absolute;
+    z-index: -1;
+}

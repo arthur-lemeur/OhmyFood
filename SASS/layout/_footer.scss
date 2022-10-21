@@ -1,0 +1,19 @@
+footer {
+    background-color: #353535;
+    gap: 1vh;
+    padding-bottom: $padding;
+    * {
+        color: white;
+        text-align: left;
+        margin-left: 3vh;
+        justify-content: start;
+        padding-top: 0.7vh;
+    }
+    h1 {
+        padding: $padding;
+    }
+    a {
+        display: flex;
+        align-items: center;
+    }
+}

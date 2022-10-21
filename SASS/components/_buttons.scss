@@ -1,0 +1,13 @@
+.button-discover {
+    padding: 1vh 2vh;
+    border-radius: 25px;
+    border: 0px;
+    color: white;
+    background-image: linear-gradient(#ff79da, #9356dc);
+    box-shadow: $shadows;
+    &:hover {
+        cursor: pointer;
+        opacity: 80%;
+        box-shadow: $shadows-hover;
+    }
+}

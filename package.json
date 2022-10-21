@@ -1,0 +1,19 @@
+{
+    "name": "ohmyfood",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass  --watch ./sass/main.scss:./sass/main.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/arthur-lemeur/OpenClassrooms_4_OhMyFood.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/arthur-lemeur/OpenClassrooms_4_OhMyFood/issues"
+    },
+    "homepage": "https://github.com/arthur-lemeur/OpenClassrooms_4_OhMyFood#readme"
+}

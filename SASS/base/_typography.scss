@@ -1,0 +1,34 @@
+h1 {
+    font-family: "Shrikhand", cursive;
+    font-size: 30px;
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    color: black;
+}
+header p,
+h4 {
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 300;
+}
+
+.heart {
+    transform: scale(0.1);
+}
+
+.item_selection {
+    h3 {
+        font-size: 16px;
+    }
+    p {
+        font-size: 12px;
+    }
+}
