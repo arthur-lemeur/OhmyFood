@@ -1,27 +1,53 @@
 .restaurant_page {
-    background-color: $color_background-menus;
-    border-radius: 25px 25px 0px 0px;
-    margin-top: 27vh;
     text-align: center;
-    > p {
-        border-bottom: 2px solid #99e2d0;
-        width: $padding * 2;
-        margin-top: $padding;
+    figure {
+        z-index: -1;
+        position: relative;
     }
     .restaurant_name {
+        position: absolute;
+        bottom: -3%;
+        width: 100%;
+        background-color: $color_background-menus;
+        border-radius: 25px 25px 0px 0px;
         display: flex;
         align-items: center;
         justify-content: space-around;
         padding-top: $padding;
         padding-bottom: $padding;
+        svg {
+            fill-rule: nonzero;
+            stroke: black;
+            stroke-width: 10;
+            fill: $color_background-menus;
+            &:hover {
+                fill: url(#gradient);
+            }
+        }
+    }
+    .menus {
+        padding-top: $padding;
+        padding-left: $padding;
+        padding-right: $padding;
+        background-color: $color_background-menus;
+        > p {
+            text-align: left;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 10%;
+                border-bottom: 3px solid #99e2d0;
+            }
+        }
+        #plats {
+            margin-left: 10%;
+        }
     }
     button {
         margin: $padding;
         width: 200px;
     }
-}
-
-body > img {
-    position: absolute;
-    z-index: -1;
 }

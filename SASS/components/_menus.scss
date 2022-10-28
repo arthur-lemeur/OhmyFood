@@ -3,6 +3,7 @@
     box-shadow: $shadows;
     position: relative;
     margin-bottom: $padding;
+    background-color: white;
     figure {
         img {
             border-radius: 15px 15px 0px 0px;
@@ -10,69 +11,127 @@
             object-fit: cover;
         }
         figcaption {
-            padding: 1vh;
-        }
-    }
-    i {
-        position: absolute;
-        bottom: $padding;
-        right: $padding;
-        transform: scale(1.5);
-    }
-}
-
-.item_selection {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    border: 0px solid white;
-    border-radius: 10px;
-    box-shadow: $shadows;
-    margin-top: $padding;
-    padding-left: 1vh;
-    position: relative;
-    text-align: left;
-    height: 60px;
-    flex: 4;
-    .selector {
-        height: 100%;
-        display: none;
-        background-color: #99e2d0;
-        width: 20%;
-        border-radius: 0px 9px 9px 0px;
-        position: relative;
-        flex: 1;
-        .fa-solid {
-            transform: scale(1.5);
-            color: white;
-            position: absolute;
-            top: 35%;
-            left: 35%;
-        }
-    }
-    > div {
-        flex-wrap: nowrap;
-        flex: 3;
-        overflow: hidden;
-    }
-    > h3 {
-        display: flex;
-        border-radius: 0px 9px 9px 0px;
-        font-size: medium;
-        height: 100%;
-        max-width: 15%;
-        text-align: end;
-        align-items: flex-end;
-        flex: 1;
-    }
-    &:hover {
-        .selector {
-            display: block;
-        }
-        div {
-            > p {
-                display: none;
+            padding: 3%;
+            i {
+                position: absolute;
+                bottom: 5%;
+                right: $padding * 2;
+                transform: scale(1.8);
+            }
+            svg {
+                position: absolute;
+                right: 5%;
+                bottom: 12%;
+                fill-rule: nonzero;
+                stroke: black;
+                stroke-width: 10;
+                fill: white;
+                &:hover {
+                    fill: url(#gradient);
+                }
             }
         }
+    }
+}
+.menus {
+    input {
+        display: none;
+        &:checked {
+            + label {
+                /*grid-template-columns: repeat(4, 1fr);*/
+                > .selector {
+                    /*grid-column: 4;
+                    visibility: visible;*/
+                    width: 20%;
+                    right: 0%;
+                }
+                > span {
+                    /*grid-column: 3;*/
+                    right: 20%;
+                }
+                > h3,
+                p {
+                    /*grid-column: 1 / 3;*/
+                    width: 60%;
+                }
+            }
+        }
+    }
+    label {
+        /*display: grid;*/
+        display: flex;
+        justify-content: space-between;
+        /* grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 30px);*/
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        background-color: white;
+        border: 0px solid white;
+        border-radius: 10px;
+        box-shadow: $shadows;
+        margin-top: $padding;
+        margin-bottom: $padding;
+        position: relative;
+        text-align: left;
+        height: 60px;
+        width: 100%;
+        flex: 4;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.5s;
+        h3 {
+            /*padding-left: 3%;
+            padding-top: 2%;
+            grid-column: 1 /4;
+            grid-row: 1;*/
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position: absolute;
+            top: 2%;
+            left: 3%;
+            width: 100%;
+            transition: all 0.5s;
+        }
+        p {
+            /*padding-left: 3%;
+            grid-column: 1 /4;
+            grid-row: 2;*/
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position: absolute;
+            bottom: 2%;
+            left: 3%;
+            width: 100%;
+            transition: all 0.5s;
+        }
+        span {
+            /*grid-column: 3;
+            grid-row: 2;*/
+            text-align: right;
+            padding-right: $padding;
+            position: absolute;
+            bottom: 2%;
+            right: 3%;
+            transition: all 0.5s;
+        }
+        .selector {
+            /* grid-column: 4;
+            visibility: hidden;*/
+            height: 60px;
+            width: 100%;
+            background-color: #99e2d0;
+            border-radius: 0px 9px 9px 0px;
+            right: -100%;
+            text-align: center;
+            position: absolute;
+            padding-top: 18px;
+            transition: all 0.5s;
+        }
+    }
+    .fa-solid {
+        transform: scale(2);
+        color: white;
     }
 }

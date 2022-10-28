@@ -5,15 +5,24 @@ footer {
     * {
         color: white;
         text-align: left;
-        margin-left: 3vh;
         justify-content: start;
-        padding-top: 0.7vh;
     }
     h1 {
         padding: $padding;
     }
-    a {
-        display: flex;
-        align-items: center;
+    ul {
+        margin: 0;
+    }
+    li {
+        a {
+            display: flex;
+            gap: $padding;
+            align-items: center;
+            padding: 2%;
+            margin-left: $padding;
+        }
+        i {
+            width: 20px;
+        }
     }
 }
