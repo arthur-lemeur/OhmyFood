@@ -1,4 +1,6 @@
 body {
     width: 100%;
-    @include desktop;
+    @include tablet {
+        margin: auto;
+    }
 }

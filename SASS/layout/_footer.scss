@@ -2,7 +2,9 @@ footer {
     background-color: #353535;
     gap: 1vh;
     padding-bottom: $padding;
-    * {
+    h1,
+    h4,
+    i {
         color: white;
         text-align: left;
         justify-content: start;
@@ -23,6 +25,23 @@ footer {
         }
         i {
             width: 20px;
+        }
+    }
+    @include tablet {
+        display: flex;
+        padding-bottom: 2%;
+        align-items: center;
+        width: 100%;
+        h1 {
+            padding: 2%;
+            order: 5;
+            font-size: 24px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: end;
+            width: 100%;
         }
     }
 }

@@ -8,27 +8,57 @@ section,
     padding-top: 10%;
     padding-bottom: 10%;
     background-color: $color_background-menus;
+    > div {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            gap: 2%;
+            overflow: hidden;
+
+            .menu {
+                width: 25%;
+            }
+        }
+    }
 }
 
 .loading_wheel {
-    transform: rotate(0turn);
-    width: 15%;
+    width: 250px;
+    height: 250px;
     opacity: 0;
-    position: absolute;
-    left: 42%;
-    bottom: 5%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: rotate(0turn) translateX(-50%) translateY(-50%);
     animation: wheel 4s linear forwards;
     animation-delay: 1s;
+    @include tablet {
+        .loading_wheel {
+            width: 10%;
+            left: 45%;
+        }
+    }
+}
+
+.loading-screen_white {
+    background-color: white;
+    opacity: 0.2;
+    animation: screen 4s linear forwards;
 }
 
 .menu {
     opacity: 1;
     animation: restaurants 2s both;
-    padding-bottom: $padding;
     @for $i from 1 through 5 {
         &--#{$i} {
-            animation-delay: 4s + $i;
+            animation-delay: 1s + $i;
         }
+    }
+    &--1 {
+        padding-bottom: $padding;
     }
 }
 
@@ -38,7 +68,10 @@ section,
     text-align: center;
     position: relative;
     h2 {
-        font-size: 24px;
+        font-size: 18px;
+        @include tablet {
+            padding-bottom: 2%;
+        }
     }
     p {
         font-size: 18px;
@@ -52,15 +85,26 @@ section,
     padding-left: $padding;
     padding-right: $padding;
     height: 33%;
+    @include tablet {
+        margin-bottom: $padding;
+    }
     h2 {
         text-align: start;
         margin-bottom: $padding;
     }
     h4 {
-        font-size: 1.5vh;
+        font-size: 16px;
+        @include breakpoint-desktop {
+            font-size: 18px;
+        }
     }
     &_steps {
         counter-reset: counter1;
+        @include tablet {
+            display: flex;
+            justify-content: space-evenly;
+            gap: $padding;
+        }
     }
     #howTo_steps-store {
         background-color: #f5edff;
@@ -81,7 +125,7 @@ section,
         position: relative;
         width: 100%;
         height: 100%;
-        animation: loader 3s ease-in-out both;
+        animation: loader 2s ease-in-out both;
         @for $i from 1 through 3 {
             &--#{$i} {
                 animation-delay: 1s * $i;
@@ -103,7 +147,8 @@ section,
         }
         .icon {
             color: #7e7e7e;
-            padding: 0% 5% 0% 5%;
+            padding: 0% 5%;
+            width: 30px;
             transform: scale(1.5);
             z-index: 1;
             animation: loader_icon 3s ease-in-out both;
@@ -122,6 +167,19 @@ section,
             @for $i from 1 through 3 {
                 &--#{$i} {
                     animation-delay: 1s * $i;
+                }
+            }
+        }
+        @include tablet {
+            padding: 2%;
+            animation: restaurant 3s ease-in-out both;
+            @for $i from 1 through 3 {
+                &--#{$i} {
+                    animation-delay: 1s * $i;
+
+                    i {
+                        padding: 0 2%;
+                    }
                 }
             }
         }

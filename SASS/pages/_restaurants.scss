@@ -1,7 +1,6 @@
 .restaurant_page {
     text-align: center;
     figure {
-        z-index: -1;
         position: relative;
     }
     .restaurant_name {
@@ -24,8 +23,16 @@
                 fill: url(#gradient);
             }
         }
+        @include breakpoint-desktop {
+            width: 60%;
+            margin: 0% 20%;
+            justify-content: center;
+            gap: 50px;
+        }
     }
     .menus {
+        width: 100%;
+        margin: auto;
         padding-top: $padding;
         padding-left: $padding;
         padding-right: $padding;
@@ -42,12 +49,23 @@
                 border-bottom: 3px solid #99e2d0;
             }
         }
-        #plats {
-            margin-left: 10%;
+        @include breakpoint-desktop {
+            width: 60%;
+            margin: auto;
+            padding: 0% 10%;
         }
     }
     button {
         margin: $padding;
         width: 200px;
+    }
+}
+
+.label {
+    animation: list 1s ease-in-out both;
+    @for $i from 1 through 9 {
+        &--#{$i} {
+            animation-delay: 500ms * $i;
+        }
     }
 }

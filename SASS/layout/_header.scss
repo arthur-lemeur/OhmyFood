@@ -22,23 +22,6 @@ header {
     position: relative;
     box-shadow: $shadows;
 }
-.header_menus-home {
-    background-color: #eaeaea;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    label {
-        padding: $padding;
-    }
-    input {
-        width: 150px;
-        border: none;
-        background-color: #eaeaea;
-    }
-}
 .header_menus {
     display: flex;
     background-color: white;
@@ -55,5 +38,24 @@ header {
         text-align: center;
         border-bottom: 0;
         box-shadow: 0 0 white;
+    }
+    &-home {
+        background: linear-gradient(grey, 5%, #eaeaea);
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        text-align: center;
+        display: flex;
+        label {
+            padding: $padding;
+            @include tablet {
+                padding: 2%;
+            }
+        }
+        input {
+            width: 150px;
+            border: none;
+            background-color: transparent;
+        }
     }
 }
