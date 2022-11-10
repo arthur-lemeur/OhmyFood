@@ -40,8 +40,11 @@ footer {
 
         ul {
             display: flex;
-            justify-content: end;
             width: 100%;
+            justify-content: end;
+            li {
+                width: 220px;
+            }
         }
     }
 }

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <script
+            src="https://kit.fontawesome.com/a9faad54a1.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&family=Shrikhand&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../CSS/normalizer.css" />
+        <link rel="stylesheet" href="../SASS/main.css" />
+
+        <title>Oh My Food - Le délice des sens</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+</html>
+
+<body>
+    <header class="header_menus">
+        <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <h1>ohmyfood</h1>
+    </header>
+
+    <main class="restaurant_page">
+        <figure>
+            <img
+                src="../ressources/images/Medium/le_delice_des_sens.png"
+                alt="photo du restaurant le délice des sens"
+            />
+
+            <figcaption class="restaurant_name">
+                <h1>Le délice des sens</h1>
+                <svg height="40" width="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff79da; stop-opacity: 1" />
+                            <stop offset="100%" style="stop-color:#9356dc; stop-opacity: 1" />
+                    </defs>
+                    <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                </svg>
+            </figcaption>
+        </figure>
+        <div class="menus">
+            <p>ENTRÉES</p>
+            <form>
+                <input
+                    type="radio"
+                    class="item_selection"
+                    id="tartare"
+                    name="entree"
+                />
+                <label for="tartare" class="label label--1">
+                    <h3>Tartare de thon</h3>
+                    <p>Assaisonné au yuzu</p>
+                    <span>25€</span>
+                    <div class="selector">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+
+                <input
+                    type="radio"
+                    class="item_selection"
+                    id="bouchee"
+                    name="entree"
+                />
+                <label for="bouchee" class="label label--2">
+                    <h3>Bouchée de homard croustillant</h3>
+                    <p>Et sa farandole de petits légumes</p>
+                    <span>35€</span>
+                    <div class="selector">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+
+                <input
+                    type="radio"
+                    class="item_selection"
+                    id="veloute"
+                    name="entree"
+                />
+                <label for="veloute" class="label label--3">
+                    <h3>Velouté de cèpes</h3>
+                    <p>Aux truffes</p>
+                    <span>20€</span>
+                    <div class="selector">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+            </form>
+
+            <p id="plats">PLATS</p>
+
+            <form>
+                <input
+                    type="radio"
+                    class="item_selection"
+                    id="poulet"
+                    name="plat"
+                />
+                <label for="poulet" class="label label--4">
+                    <h3>Poulet rôti aux herbes de Provence</h3>
+                    <p>Et sa crème de truffe</p>
+                    <span>40€</span>
+                    <div class="selector">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+
+                <input
+                    type="radio"
+                    class="item_selection"
+                    id="langouste"
+                    name="plat"
+                />
+                <label for="langouste" class="label label--5">
+                    <h3>Langouste rôtie</h3>
+                    <p>Et ses légumes de saison</p>
+                    <span>35€</span>
+                    <div class="selector">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+
+                <input
+                    type="radio"
+                    class="item_selection"
+                    id="angus"
+                    name="plat"
+                />
+                <label for="angus" class="label label--6">
+                    <h3>Côte de bœuf Angus</h3>
+                    <p>Et sa purée de panais</p>
+                    <span>44€</span>
+                    <div class="selector">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+            </form>
+
+            <p>DESSERTS</p>
+            <form>
+                <input
+                    type="radio"
+                    class="item_selection"
+                    id="farandole"
+                    name="dessert"
+                />
+                <label for="farandole" class="label label--7">
+                    <h3>Farandole de desserts</h3>
+                    <p>Du chef</p>
+                    <span>18€</span>
+                    <div class="selector">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+
+                <input
+                    type="radio"
+                    class="item_selection"
+                    id="creme"
+                    name="dessert"
+                />
+                <label for="creme" class="label label--8">
+                    <h3>Crème brûlée</h3>
+                    <p>Revisitée</p>
+                    <span>22€</span>
+                    <div class="selector">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+
+                <input
+                    type="radio"
+                    class="item_selection"
+                    id="tiramisu"
+                    name="dessert"
+                />
+                <label for="tiramisu" class="label label--9">
+                    <h3>Tiramisu</h3>
+                    <p>À la noisette</p>
+                    <span>23€</span>
+                    <div class="selector">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+            </form>
+
+            <button type="submit" class="button-discover">Commander</button>
+        </div>
+    </main>
+
+    <footer>
+        <h1>ohmyfood</h1>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h4>Proposer un restaurant</h4>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <h4>Devenir partenaire</h4>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h4>Mentions légales</h4>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:contact@ohmyfood.fr">
+                    <h4>Contact</h4>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>

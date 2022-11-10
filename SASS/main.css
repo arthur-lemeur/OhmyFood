@@ -150,8 +150,11 @@ footer li i {
   }
   footer ul {
     display: flex;
-    justify-content: end;
     width: 100%;
+    justify-content: end;
+  }
+  footer ul li {
+    width: 220px;
   }
 }
 
@@ -554,6 +557,11 @@ section,
 }
 .restaurant_page figure {
   position: relative;
+  height: 600px;
+}
+.restaurant_page figure img {
+  height: 600px;
+  object-fit: cover;
 }
 .restaurant_page .restaurant_name {
   position: absolute;
