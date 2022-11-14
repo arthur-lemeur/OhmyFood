@@ -22,20 +22,26 @@
         .heart-empty {
             position: absolute;
             top: 50%;
-            right: 150px;
+            right: 20px;
             transform: translateY(-50%);
             cursor: pointer;
             stroke: black;
             stroke-width: 10;
             fill: transparent;
+            @include breakpoint-desktop {
+                right: 150px;
+            }
         }
         .heart-checked {
             position: absolute;
             top: 50%;
-            right: 150px;
+            right: 20px;
             cursor: pointer;
             transform: scale(0) translateY(-50%);
             fill: url(#gradient);
+            @include breakpoint-desktop {
+                right: 150px;
+            }
         }
         .heartbox {
             input {

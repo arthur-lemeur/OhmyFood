@@ -581,20 +581,30 @@ section,
 .restaurant_page .restaurant_name .heart-empty {
   position: absolute;
   top: 50%;
-  right: 150px;
+  right: 20px;
   transform: translateY(-50%);
   cursor: pointer;
   stroke: black;
   stroke-width: 10;
   fill: transparent;
 }
+@media screen and (min-width: 1024px) {
+  .restaurant_page .restaurant_name .heart-empty {
+    right: 150px;
+  }
+}
 .restaurant_page .restaurant_name .heart-checked {
   position: absolute;
   top: 50%;
-  right: 150px;
+  right: 20px;
   cursor: pointer;
   transform: scale(0) translateY(-50%);
   fill: url(#gradient);
+}
+@media screen and (min-width: 1024px) {
+  .restaurant_page .restaurant_name .heart-checked {
+    right: 150px;
+  }
 }
 .restaurant_page .restaurant_name .heartbox input {
   display: none;
