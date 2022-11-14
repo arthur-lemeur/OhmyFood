@@ -19,21 +19,30 @@
         justify-content: space-around;
         padding-top: $padding;
         padding-bottom: $padding;
-        svg {
+        .heart-empty {
+            position: absolute;
+            top: 50%;
+            right: 150px;
+            transform: translateY(-50%);
             cursor: pointer;
             stroke: black;
             stroke-width: 10;
             fill: transparent;
-            &:hover {
-                fill: url(#gradient_hover);
-            }
+        }
+        .heart-checked {
+            position: absolute;
+            top: 50%;
+            right: 150px;
+            cursor: pointer;
+            transform: scale(0) translateY(-50%);
+            fill: url(#gradient);
         }
         .heartbox {
             input {
                 display: none;
             }
-            input[type="checkbox"]:checked + svg {
-                fill: url(#gradient_checked);
+            input[type="checkbox"]:checked ~ .heart-checked {
+                animation: heart 1s ease-in-out both;
             }
         }
         @include breakpoint-desktop {

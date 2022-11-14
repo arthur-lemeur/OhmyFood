@@ -19,7 +19,7 @@
                 right: $padding * 2;
                 transform: scale(1.8);
             }
-            svg {
+            .heart-empty {
                 cursor: pointer;
                 position: absolute;
                 right: 20px;
@@ -28,16 +28,22 @@
                 stroke: black;
                 stroke-width: 10;
                 fill: transparent;
-                &:hover {
-                    fill: url(#gradient_hover);
-                }
+            }
+
+            .heart-checked {
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: scale(0) translateY(-50%);
+                fill: url(#gradient);
             }
             .heartbox {
                 input {
                     display: none;
                 }
-                input[type="checkbox"]:checked + svg {
-                    fill: url(#gradient_checked);
+                input[type="checkbox"]:checked ~ .heart-checked {
+                    animation: heart 1s ease-in-out both;
                 }
             }
         }
@@ -100,7 +106,7 @@
             position: absolute;
             top: 2%;
             left: 3%;
-            width: 100%;
+            width: 80%;
             transition: all 0.5s;
         }
         p {
@@ -110,7 +116,7 @@
             position: absolute;
             bottom: 2%;
             left: 3%;
-            width: 100%;
+            width: 80%;
             transition: all 0.5s;
         }
         span {
@@ -139,7 +145,7 @@
             }
             .fa-solid {
                 color: #99e2d0;
-                transform: scale(1.8);
+                transform: scale(1.5);
                 transition: 500ms linear;
             }
         }

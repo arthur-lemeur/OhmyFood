@@ -30,11 +30,21 @@ p {
   transform: scale(0.1);
 }
 
-.item_selection h3 {
+form label h3 {
   font-size: 16px;
 }
-.item_selection p {
-  font-size: 12px;
+@media screen and (min-width: 1024px) {
+  form label h3 {
+    font-size: 18px;
+  }
+}
+form label p {
+  font-size: 13px;
+}
+@media screen and (min-width: 1024px) {
+  form label p {
+    font-size: 16px;
+  }
 }
 
 header h1 {
@@ -378,13 +388,14 @@ section,
   border: 0px;
   color: white;
   background-image: linear-gradient(#ff79da, #9356dc);
+  transition: 100ms linear;
   box-shadow: 1px 2px 10px rgba(128, 128, 128, 0.431);
   animation: restaurants 1s both;
   animation-delay: 5s;
 }
 .button-discover:hover {
   cursor: pointer;
-  opacity: 80%;
+  background-image: linear-gradient(#ff83dd, #985ede);
   box-shadow: 2px 4px 10px rgba(102, 99, 99, 0.909);
 }
 
@@ -410,7 +421,7 @@ section,
   right: 10%;
   transform: scale(1.8);
 }
-.cards-home figure figcaption svg {
+.cards-home figure figcaption .heart-empty {
   cursor: pointer;
   position: absolute;
   right: 20px;
@@ -420,14 +431,19 @@ section,
   stroke-width: 10;
   fill: transparent;
 }
-.cards-home figure figcaption svg:hover {
-  fill: url(#gradient_hover);
+.cards-home figure figcaption .heart-checked {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: scale(0) translateY(-50%);
+  fill: url(#gradient);
 }
 .cards-home figure figcaption .heartbox input {
   display: none;
 }
-.cards-home figure figcaption .heartbox input[type=checkbox]:checked + svg {
-  fill: url(#gradient_checked);
+.cards-home figure figcaption .heartbox input[type=checkbox]:checked ~ .heart-checked {
+  animation: heart 1s ease-in-out both;
 }
 @media screen and (min-width: 992px) {
   .cards-home {
@@ -481,7 +497,7 @@ section,
   position: absolute;
   top: 2%;
   left: 3%;
-  width: 100%;
+  width: 80%;
   transition: all 0.5s;
 }
 .menus label p {
@@ -491,7 +507,7 @@ section,
   position: absolute;
   bottom: 2%;
   left: 3%;
-  width: 100%;
+  width: 80%;
   transition: all 0.5s;
 }
 .menus label span {
@@ -519,7 +535,7 @@ section,
 }
 .menus label:hover .fa-solid {
   color: #99e2d0;
-  transform: scale(1.8);
+  transform: scale(1.5);
   transition: 500ms linear;
 }
 .menus .fa-solid {
@@ -562,20 +578,29 @@ section,
   padding-top: 5%;
   padding-bottom: 5%;
 }
-.restaurant_page .restaurant_name svg {
+.restaurant_page .restaurant_name .heart-empty {
+  position: absolute;
+  top: 50%;
+  right: 150px;
+  transform: translateY(-50%);
   cursor: pointer;
   stroke: black;
   stroke-width: 10;
   fill: transparent;
 }
-.restaurant_page .restaurant_name svg:hover {
-  fill: url(#gradient_hover);
+.restaurant_page .restaurant_name .heart-checked {
+  position: absolute;
+  top: 50%;
+  right: 150px;
+  cursor: pointer;
+  transform: scale(0) translateY(-50%);
+  fill: url(#gradient);
 }
 .restaurant_page .restaurant_name .heartbox input {
   display: none;
 }
-.restaurant_page .restaurant_name .heartbox input[type=checkbox]:checked + svg {
-  fill: url(#gradient_checked);
+.restaurant_page .restaurant_name .heartbox input[type=checkbox]:checked ~ .heart-checked {
+  animation: heart 1s ease-in-out both;
 }
 @media screen and (min-width: 1024px) {
   .restaurant_page .restaurant_name {
@@ -784,5 +809,19 @@ section,
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+@keyframes heart {
+  0% {
+    transform: scale(0) translateY(-50%);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1) translateY(-50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) translateY(-50%);
+    opacity: 1;
   }
 }/*# sourceMappingURL=main.css.map */

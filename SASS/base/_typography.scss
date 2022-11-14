@@ -27,11 +27,17 @@ p {
     transform: scale(0.1);
 }
 
-.item_selection {
+form label {
     h3 {
         font-size: 16px;
+        @include breakpoint-desktop {
+            font-size: 18px;
+        }
     }
     p {
-        font-size: 12px;
+        font-size: 13px;
+        @include breakpoint-desktop {
+            font-size: 16px;
+        }
     }
 }
