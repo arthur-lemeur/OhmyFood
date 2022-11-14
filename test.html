@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            svg {
+                position: absolute;
+                right: 5%;
+                bottom: 7%;
+                stroke: black;
+                stroke-width: 10;
+                fill: white;
+            }
+            svg:hover {
+                fill: url(#gradient);
+            }
+        </style>
+    </head>
+</html>
+<main class="restaurants">
+    <h2 class="menu menu--1">Restaurants</h2>
+    <div>
+        <a
+            href="restaurants/palette_du_gout.html "
+            class="cards-home menu menu--2"
+        >
+            <figure>
+                <img
+                    src="ressources/images/Medium/la_palette_du_gout.png"
+                    alt="photo du restaurant la palette du goût"
+                />
+                <figcaption>
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+                    <svg viewBox="0 0 512 512" height="40" width="50">
+                        <defs>
+                            <linearGradient
+                                id="gradient"
+                                x1="0%"
+                                y1="0%"
+                                x2="0%"
+                                y2="1"
+                            >
+                                <stop
+                                    offset="1"
+                                    style="stop-color: white; stop-opacity: 1"
+                                >
+                                    <animate
+                                        attributeName="offset"
+                                        from="2"
+                                        to="0"
+                                        dur="5s"
+                                        repeatCount="1"
+                                        fill="freeze"
+                                    />
+                                </stop>
+                                <stop
+                                    offset="0"
+                                    style="stop-color: #ff79da; stop-opacity: 1"
+                                />
+                                <stop
+                                    offset="1"
+                                    style="stop-color: #9356dc; stop-opacity: 1"
+                                />
+                            </linearGradient>
+                        </defs>
+
+                        <path
+                            width="50px"
+                            height="50px"
+                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"
+                        ></path>
+                    </svg>
+                </figcaption>
+            </figure>
+        </a>
+    </div>
+</main>

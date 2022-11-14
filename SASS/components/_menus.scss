@@ -12,6 +12,7 @@
         }
         figcaption {
             padding: 3%;
+            position: relative;
             i {
                 position: absolute;
                 bottom: 5%;
@@ -19,26 +20,34 @@
                 transform: scale(1.8);
             }
             svg {
+                cursor: pointer;
                 position: absolute;
-                right: 5%;
-                bottom: 7%;
-                fill-rule: nonzero;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
                 stroke: black;
                 stroke-width: 10;
-                fill: white;
+                fill: transparent;
                 &:hover {
-                    fill: url(#gradient);
+                    fill: url(#gradient_hover);
                 }
-                @include tablet {
-                    bottom: 5%;
+            }
+            .heartbox {
+                input {
+                    display: none;
+                }
+                input[type="checkbox"]:checked + svg {
+                    fill: url(#gradient_checked);
                 }
             }
         }
     }
+
     @include tablet {
         padding-bottom: 0;
     }
 }
+
 .menus {
     input {
         display: none;

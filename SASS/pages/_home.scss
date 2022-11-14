@@ -51,12 +51,6 @@ section,
 
 .menu {
     opacity: 1;
-    animation: restaurants 2s both;
-    @for $i from 1 through 5 {
-        &--#{$i} {
-            animation-delay: 1s + $i;
-        }
-    }
     &--1 {
         padding-bottom: $padding;
     }

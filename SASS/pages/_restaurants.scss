@@ -20,12 +20,20 @@
         padding-top: $padding;
         padding-bottom: $padding;
         svg {
-            fill-rule: nonzero;
+            cursor: pointer;
             stroke: black;
             stroke-width: 10;
-            fill: $color_background-menus;
+            fill: transparent;
             &:hover {
-                fill: url(#gradient);
+                fill: url(#gradient_hover);
+            }
+        }
+        .heartbox {
+            input {
+                display: none;
+            }
+            input[type="checkbox"]:checked + svg {
+                fill: url(#gradient_checked);
             }
         }
         @include breakpoint-desktop {

@@ -212,22 +212,6 @@ section,
 
 .menu {
   opacity: 1;
-  animation: restaurants 2s both;
-}
-.menu--1 {
-  animation-delay: 2s;
-}
-.menu--2 {
-  animation-delay: 3s;
-}
-.menu--3 {
-  animation-delay: 4s;
-}
-.menu--4 {
-  animation-delay: 5s;
-}
-.menu--5 {
-  animation-delay: 6s;
 }
 .menu--1 {
   padding-bottom: 5%;
@@ -418,6 +402,7 @@ section,
 }
 .cards-home figure figcaption {
   padding: 3%;
+  position: relative;
 }
 .cards-home figure figcaption i {
   position: absolute;
@@ -426,21 +411,23 @@ section,
   transform: scale(1.8);
 }
 .cards-home figure figcaption svg {
+  cursor: pointer;
   position: absolute;
-  right: 5%;
-  bottom: 7%;
-  fill-rule: nonzero;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   stroke: black;
   stroke-width: 10;
-  fill: white;
+  fill: transparent;
 }
 .cards-home figure figcaption svg:hover {
-  fill: url(#gradient);
+  fill: url(#gradient_hover);
 }
-@media screen and (min-width: 992px) {
-  .cards-home figure figcaption svg {
-    bottom: 5%;
-  }
+.cards-home figure figcaption .heartbox input {
+  display: none;
+}
+.cards-home figure figcaption .heartbox input[type=checkbox]:checked + svg {
+  fill: url(#gradient_checked);
 }
 @media screen and (min-width: 992px) {
   .cards-home {
@@ -576,13 +563,19 @@ section,
   padding-bottom: 5%;
 }
 .restaurant_page .restaurant_name svg {
-  fill-rule: nonzero;
+  cursor: pointer;
   stroke: black;
   stroke-width: 10;
-  fill: #f6f6f6;
+  fill: transparent;
 }
 .restaurant_page .restaurant_name svg:hover {
-  fill: url(#gradient);
+  fill: url(#gradient_hover);
+}
+.restaurant_page .restaurant_name .heartbox input {
+  display: none;
+}
+.restaurant_page .restaurant_name .heartbox input[type=checkbox]:checked + svg {
+  fill: url(#gradient_checked);
 }
 @media screen and (min-width: 1024px) {
   .restaurant_page .restaurant_name {
