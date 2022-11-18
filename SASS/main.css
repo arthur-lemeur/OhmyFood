@@ -1,6 +1,6 @@
 h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 * {
@@ -560,11 +560,21 @@ section,
 }
 .restaurant_page figure {
   position: relative;
-  height: 600px;
+  height: 300px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant_page figure {
+    height: 600px;
+  }
 }
 .restaurant_page figure img {
-  height: 600px;
+  height: 300px;
   object-fit: cover;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant_page figure img {
+    height: 600px;
+  }
 }
 .restaurant_page .restaurant_name {
   position: absolute;
